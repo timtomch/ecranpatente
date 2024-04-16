@@ -15,3 +15,14 @@ Voici un exemple de crontab:
 */30 * * * * bash /home/pi/maj-images.sh >> /home/pi/crontab.log
 */2 * * * * export XAUTHORITY=/home/pi/.Xauthority; export DISPLAY=:0; bash /home/pi/switchview.sh >> /home/pi/screenchange.log
 ```
+
+### Logiciels nécessaires
+
+Les scripts nécessitent les logiciels suivants:
+
+* [feh](https://feh.finalrewind.org/)
+* [gdown](https://github.com/wkentaro/gdown)
+
+### Affichage du calendrier
+
+Le calendrier utilise le [script suivant](https://github.com/timtomch/lapatentecal) exécuté sur le site web de la Patente.
