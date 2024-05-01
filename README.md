@@ -12,9 +12,12 @@ Les scripts contenus dans ce dossier permettent de démarrer les différents mod
 Voici un exemple de crontab:
 
 ```
-*/30 * * * * bash /home/pi/maj-images.sh >> /home/pi/crontab.log
+*/30 * * * * export XAUTHORITY=/home/pi/.Xauthority; export DISPLAY=:0; bash /home/pi/maj-images.sh >> /home/pi/crontab.log
 */2 * * * * export XAUTHORITY=/home/pi/.Xauthority; export DISPLAY=:0; bash /home/pi/switchview.sh >> /home/pi/screenchange.log
 ```
+
+Noter qu'il est important que crontab exécute les scripts en utilisant la session graphique active de l'utilisateur `pi`. C'est pourquoi
+il faut passer les variables d'environnement `XAUTHORITY` et `DISPLAY` tel que ci-dessus.
 
 ### Logiciels nécessaires
 
